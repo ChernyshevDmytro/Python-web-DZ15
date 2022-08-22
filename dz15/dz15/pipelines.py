@@ -13,7 +13,7 @@ from .models import News
 
 class Dz15Pipeline:
     def process_item(self, item, spider):            
-        engine = create_engine("sqlite:///dz15.db")
+        engine = create_engine("sqlite:///spiders/dz15.db")
         DBSession = sessionmaker(bind=engine)
         session = DBSession()
         if item["title"] and item["link"] and item["source"]:

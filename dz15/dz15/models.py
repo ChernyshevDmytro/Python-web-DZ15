@@ -13,5 +13,5 @@ class News(Base):
     title = Column(String(50), nullable=False)
     link = Column(String(50), nullable=False)
 
-engine = create_engine('sqlite:///dz15.db', connect_args={'check_same_thread': False})
+engine = create_engine('sqlite:///spiders/dz15.db', connect_args={'check_same_thread': False})
 Base.metadata.create_all(engine)          

@@ -16,7 +16,7 @@ class NewsSpider(scrapy.Spider):
                 if "vda.com.ua/" not in link:
                     full_link= f"http://www.pravda.com.ua{link}"
                 else:
-                   link = link     
+                   full_link = link     
 
                 yield {
                     'title': quote.xpath('div[@class="article_header"]/a/span/text()').get(),
